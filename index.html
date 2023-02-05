@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ed Sheeran</title>
+    <link rel="icon" href="./img/favicon.png" />
+    <link rel="stylesheet" href="./style.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <link
+      href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script defer src="./main.js"></script>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header>
+      <div class="inner_head">
+        <a href="https://www.warnermusic.co.kr/artists/ed-sheeran/"
+          ><img class="logo" src="./img/favicon.png"
+        /></a>
+        <nav class="nav-wrap">
+          <ul class="links-container">
+            <a href="https://www.warnermusic.co.kr/#news" class="nav-link"
+              ><li>뉴스</li></a
+            >
+            <a
+              href="https://www.warnermusic.co.kr/#new-release"
+              class="nav-link"
+              ><li>플레이리스트</li></a
+            >
+            <a href="https://www.warnermusic.co.kr/#artist" class="nav-link"
+              ><li>아티스트</li></a
+            >
+            <a href="#" class="nav-link"><li>뉴스레터 구독</li></a>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main>
+      <!-- 에드시런 소개 -->
+      <section class="profile">
+        <div class="profile-container">
+          <div class="profile-item--left">
+            <h2>에드 시런 (Ed Sheeran)</h2>
+            <p>
+              2016 그래미 어워즈 올해의 노래 ‘Thinking Out Loud’로 전 세계를
+              사로잡은 마성의 싱어송라이터 에드 시런. 2집 [X]로 ‘2014년 전
+              세계에서 가장 많은 앨범 판매고를 기록한 남자 솔로 가수’ 의 자리에
+              오르는 등 각종 기록을 세우며 하나의 신드롬으로 떠올랐다. 솔직한
+              가사와 무결점의 기타 연주, 경계가 없는 음악적 팔레트의 향연을
+              들려주는 그는 현재 세계에서 가장 진보적이고 다재다능한 음유시인 중
+              한 명이자 가장 성공한 남성 아티스트로 자리하고 있다.
+            </p>
+          </div>
+          <div class="profile-item--right">
+            <h3>본명</h3>
+            <h4>Edward Christopher Sheeran</h4>
+
+            <h3>출생</h3>
+            <h4>1991년 2월 17일</h4>
+
+            <h3>국가</h3>
+            <h4>영국, Suffolk</h4>
+          </div>
+        </div>
+      </section>
+
+      <!-- 랜덤이미지 -->
+      <section class="random-song">
+        <div class="song-container">
+          <div class="img-wrap">
+            <img class="album"
+            src="https://upload.wikimedia.org/wikipedia/en/8/8f/Ed_Sheeran_-_Overpass_Graffiti.png"
+            / >
+          </div>
+          <div class="text-wrap">
+            <h3 class="title">Overpass Graffiti</h3>
+            <p class="text">
+              I will always love you for what it's worth, We'll never fade like
+              graffiti on the overpass
+            </p>
+            <button class="btn--random">오늘의 노래를 추천해드려요</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 투두리스트 -->
+      <section class="todo">
+        <form>
+          <div>오늘 할 일을 적어보세요</div>
+          <div>
+            <input type="text" />
+            <button class="btn--todo">click</button>
+          </div>
+          <ul class="todo-list"></ul>
+        </form>
+      </section>
+
+      <!-- 로그인, 시계, 날씨&위치 -->
+      <section class="several-things-wrap">
+        <div class="login-container">
+          <form>
+            <input
+              type="text"
+              class="login-input"
+              placeholder="성함을 입력해주세요"
+            />
+            <button class="login-btn">로그인</button>
+            <p class="greetings">안녕하세요 <span class="name"></span>님!</p>
+          </form>
+        </div>
+        <div class="clock">
+          현재 시각은
+
+          <span class="hour"></span>
+          :
+          <span class="minute"></span>
+          :
+          <span class="seconds"></span>
+
+          입니다
+        </div>
+        <div class="weather-container"></div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer>
+      <div>
+        COPYRIGHT&copy;<span class="year"></span>WARNER MUSIC KOREA. All Rights
+        Reserved.
+      </div>
+    </footer>
+  </body>
+</html>

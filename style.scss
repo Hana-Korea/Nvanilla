@@ -1,0 +1,246 @@
+@import "./_variables.scss";
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin img() {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@mixin thing() {
+  width: 30vw;
+  height: 50%;
+  border-radius: 10px;
+  margin: 20px;
+  background-color: #fff;
+}
+@mixin vertical-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@mixin input {
+  border: 2px solid #000;
+  outline: none;
+}
+
+* {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+}
+body {
+  height: 400vh;
+  scroll-behavior: smooth;
+  header {
+    height: 100vh;
+    background-image: url("./img/profile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    .inner_head {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 114px;
+      padding: 30px 40px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.3s ease-in-out;
+      &.show {
+        background-color: rgba(185, 185, 188, 0.8);
+        position: fixed;
+        z-index: 1;
+      }
+      .logo {
+        width: 125px;
+        height: 54px;
+      }
+      .nav-wrap {
+        &.show {
+          color: #000;
+        }
+        .links-container {
+          display: flex;
+
+          a {
+            color: $menu-font-color;
+            &.show {
+              color: #000;
+            }
+          }
+          li {
+            margin-left: 20px;
+            list-style-type: none;
+            word-break: $word;
+          }
+        }
+      }
+    }
+  }
+  // 에드시런 소개 section
+  section.profile {
+    height: $section-height;
+    display: flex;
+    @include center();
+    .profile-container {
+      @include center();
+      .profile-item--left {
+        margin: 40px;
+        width: 50vw;
+        h2 {
+          font-size: 40px;
+          font-weight: 700;
+          padding-bottom: 20px;
+        }
+        p {
+          word-break: $word;
+          font-size: 20px;
+          line-height: 1.7;
+        }
+      }
+      .profile-item--right {
+        color: $profile-font-color;
+        h3 {
+          font-weight: 600;
+          font-size: 20px;
+        }
+        h4 {
+          margin: 10px 0 20px 0;
+        }
+      }
+    }
+  }
+  section.random-song {
+    height: $section-height;
+    background-color: $random-bg-color;
+    position: relative;
+    @include center();
+    .song-container {
+      height: 80%;
+      width: 80%;
+      color: $random-font-color;
+      @include center();
+      .img-wrap {
+        img.album {
+          width: 300px;
+          height: 300px;
+          margin-right: 50px;
+        }
+      }
+      .text-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .title {
+          font-weight: 700;
+          font-size: 32px;
+          margin: 10px 0;
+        }
+        .text {
+          font-size: 20px;
+          margin: 15px 0;
+        }
+        .btn--random {
+          border: 2px solid #fff;
+          width: 300px;
+          height: 40px;
+          background-color: $random-btn-color;
+        }
+      }
+    }
+  }
+}
+
+// 투두리스트
+section.todo {
+  height: $section-height;
+  background-image: url("https://pbs.twimg.com/media/E_aTySnUUAMkVAX.jpg:large");
+  @include img();
+  background-position: 20% 42%;
+  @include vertical-center();
+
+  form {
+    display: flex;
+    @include vertical-center();
+    align-items: center;
+    margin-left: 20px;
+    border-radius: 10px;
+    height: 80%;
+    width: 30%;
+    background-color: #fff;
+    overflow: auto;
+    font-size: 30px;
+    font-weight: 600;
+    input {
+      margin: 10px;
+      &:focus {
+        @include input();
+      }
+    }
+    button {
+      margin-left: 10px;
+    }
+    ul {
+      font-size: 20px;
+    }
+  }
+}
+section.several-things-wrap {
+  height: $section-height;
+  background-color: $several-sec-color;
+  font-size: $several-font-size;
+  font-weight: 600;
+  @include center();
+  .login-container {
+    @include thing();
+    @include center();
+    .login-input {
+      visibility: visible;
+
+      &.hide {
+        visibility: hidden;
+      }
+      &:focus {
+        @include input();
+      }
+    }
+    .login-btn {
+      visibility: visible;
+
+      &.hide {
+        visibility: hidden;
+      }
+    }
+    .greetings {
+      visibility: hidden;
+      &.show {
+        visibility: visible;
+      }
+    }
+  }
+  .clock {
+    @include thing();
+    @include center();
+  }
+  .weather-container {
+    @include thing();
+    @include center();
+  }
+}
+footer {
+  background-color: $footer-bg-color;
+  color: #fff;
+  height: 10vh;
+  div {
+    height: inherit;
+    @include center();
+  }
+}
